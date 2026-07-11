@@ -27,7 +27,7 @@ embed_reveal:
 docusaurus:
   plugin: docusaurus
   options:
-    course_name: Template
+    course_name: Software Security and Privacy
     sidebar: js
     structure:
       - Introduction: chapters/landing-page/README.md
@@ -45,12 +45,65 @@ docusaurus:
               path: chapters/template-chapter/yet-another-topic/
               subsections:
                 - Drills/: drills/
+      - Sessions:
+          - Introduction to Systems Security:
+              path: chapters/sessions/intro-systems-security
+              subsections:
+                - Reading/: reading/
+          - Authentication:
+              path: chapters/sessions/authentication
+              subsections:
+                - Reading/: reading/
+          - Exploiting 1:
+              path: chapters/sessions/exploit-1
+              subsections:
+                - Reading/: reading/
+          - Exploiting web:
+              path: chapters/sessions/exploit-web
+              subsections:
+                - Reading/: reading/
+          - Defense of mitigation:
+              path: chapters/sessions/defense
+              subsections:
+                - Reading/: reading/
+          - Modern Offensive and Defensive Solutions:
+              path: chapters/sessions/modern-solutions
+              subsections:
+                - Reading/: reading/
+          - Application Confinement:
+              path: chapters/sessions/application-confinement
+              subsections:
+                - Reading/: reading/
+          - System Isolation:
+              path: chapters/sessions/system-isolation
+              subsections:
+                - Reading/: reading/
+          - Software Security Assurance:
+              path: chapters/sessions/code-analysis
+              subsections:
+                - Reading/: reading/
+          - Fuzzing:
+              path: chapters/sessions/fuzzing
+              subsections:
+                - Reading/: reading/
+          - Symbolic Execution:
+              path: chapters/sessions/symexec
+              subsections:
+                - Reading/: reading/
+          - Software Supply Chain Security:
+              path: chapters/sessions/supply-chain
+              subsections:
+                - Reading/: reading/
+          - System Auditing:
+              path: chapters/sessions/system-auditing
+              subsections:
+                - Reading/: reading/
     static_assets:
       - template-chapter-template-topic: /build/make_assets/chapters/template-chapter/template-topic/slides/_site
     config_meta:
-      title: Template Repo
-      url: http://localhost/
-      baseUrl: /oer-template/
+      title: Software Security and Privacy
+      url: https://open-education-hub.github.io
+      baseUrl: /software-security-and-privacy/
       onBrokenLinks: warn
       onBrokenMarkdownLinks: warn
     config_socials:

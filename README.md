@@ -1,7 +1,7 @@
-# OER Template Repository
+# Software Security and Privacy
 
 These are open educational resources ([OER](https://en.wikipedia.org/wiki/Open_educational_resources)).
-The repository should be used as a template for the your own classes.
+The repository should be used as a template for your own classes.
 
 ## Using the Content
 
@@ -10,7 +10,7 @@ Content is located in the `chapters/` folder.
 Each chapter has its own folder.
 
 Lecture content is expected to be presented and followed.
-Practice content is expected to be used hands-on individually or as part of team.
+Practice content is expected to be used hands-on individually or as part of a team.
 
 ## Publishing Workflow
 
@@ -24,20 +24,20 @@ This workflow will build the site using [Docusaurus](https://docusaurus.io/) and
 
 ## Your first TODOs
 
-To configure this repo for the class for which you intend to develop content, you must make the following changes:
+To configure this repository for the class for which you intend to develop content, you must make the following changes:
 
 * Change the repository name to match your class name (the default name is `oer-template`).
 * In `config.yaml`:
-  * Change `title` to you class name.
-  * Change `url` to `<github_usename>.github.io`.
-  * Change `baseurl` to `/` if the repository is the only one with a GitHub page in your profile.
+  * Change `title` to your class name.
+  * Change `url` to `<github_username>.github.io`.
+  * Change `baseUrl` to `/` if the repository is the only one with a GitHub page in your profile.
      Otherwise, change it to `/<repository_name>/`.
   * Change links to social media sites, if applicable.
 
 ## Running Locally
 
 When testing locally, you will have to build the container that will run the builder based on the [`Dockerfile`](Dockerfile).
-For this, the simplest way is the use the [`Makefile`](Makefile).
+For this, the simplest way is to use the [`Makefile`](Makefile).
 First, edit the `Makefile` and update the `REPO_NAME` variable to the preferred name of your future website.
 
 To generate the web contents locally, run:
@@ -52,14 +52,14 @@ To view the local contents, start a web server by running the command:
 make serve
 ```
 
-As the output of the command tells, point your browser to `http://localhost:8080/$REPO_NAME`, where `$REPO_NAME` is the name of the repository you configured in the [`Makefile`](Makefile)..
+As the output of the command tells, point your browser to `http://localhost:8080/$REPO_NAME`, where `$REPO_NAME` is the name of the repository you configured in the [`Makefile`](Makefile).
 
 ## Chapter Contents
 
 ### Lecture
 
 Slides are written in [GitHub Markdown](https://guides.github.com/features/mastering-markdown/) and use [reveal-md](https://github.com/webpro/reveal-md) and [reveal.js](https://revealjs.com/) to render HTML output.
-Building slides requires [MarkdownPP](https://github.com/amyreese/markdown-pp).
+Building slides requires [Markdown preprocessor](https://github.com/amyreese/markdown-pp).
 Lecture slides are built from the `slides.mdpp` file using the `make` command (and the `Makefile`).
 `slides.mdpp` is a wrapper / index file;
 actual content is stored in Markdown format in files in the `slides/` subfolder.

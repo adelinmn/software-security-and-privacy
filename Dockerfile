@@ -1,22 +1,24 @@
 FROM ghcr.io/open-education-hub/openedu-builder:0.5.1
 
-# Install tools.
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
+# Install system, Python, Node.js, and npm-based tools.
 RUN apt-get update && \
-    apt-get install -yqq ffmpeg curl make
-
-# Install MarkdownPP using pip.
-RUN pip install MarkdownPP
-
-# Install node LTS (16)
-RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - && \
+    apt-get install -yqq --no-install-recommends \
+        ca-certificates \
+        curl \
+        ffmpeg \
+        make && \
+    pip install --no-cache-dir MarkdownPP==1.5.1 && \
+    curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && \
     apt-get update && \
-    apt-get install -yqq nodejs
+    apt-get install -yqq --no-install-recommends nodejs && \
+    npm install --global reveal-md@6.1.4 && \
+    npm cache clean --force && \
+    rm -rf /var/lib/apt/lists/*
 
-# Install reveal-md using npm.
-RUN npm install -g reveal-md
-
-# Install Docusaurus.
-RUN npm install create-docusaurus@2.1.0
+# Constrain dependencies installed later by openedu-builder through npx.
+ENV npm_config_before=2024-06-01T00:00:00.000Z
 
 WORKDIR /content
 

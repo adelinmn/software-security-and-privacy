@@ -1,4 +1,4 @@
-REPO_NAME = oer-template
+REPO_NAME = software-security-and-privacy
 IMAGE_NAME = $(REPO_NAME)/docusaurus:latest
 CONTAINER_NAME = open-edu-hub-$(REPO_NAME)-bash
 OUTPUT_DIR = $$PWD/.output/$(REPO_NAME)
